@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daily Image</title>
+    <style>
+      body { margin:0; padding:0; background:#000; }
+      img { max-width:100%; height:auto; display:block; margin:0 auto; }
+    </style>
+  </head>
+  <body>
+    <img id="daily-img" />
+    <script>
+      const images = [
+        "img1.jpg",
+        "img2.jpg",
+        "img3.jpg",
+        "img4.jpg"
+      ];
+      const index = new Date().getDate() % images.length;
+      document.getElementById("daily-img").src = images[index];
+    </script>
+  </body>
+</html>
